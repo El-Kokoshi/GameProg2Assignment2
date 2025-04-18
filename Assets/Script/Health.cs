@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Health : MonoBehaviour
 {
@@ -8,16 +9,26 @@ public class Health : MonoBehaviour
     public bool isBoss;
     public bool isPlayer;
     public bool isEnemy;
+
+    public Image playerHealthBar;
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         initHealth = totalHealth;
+        
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (isPlayer)
+        {
+            playerHealthBar.fillAmount = totalHealth / 100;
+        }
+
+
         if(totalHealth <= initHealth/2 && isBoss == true)
         {
 
