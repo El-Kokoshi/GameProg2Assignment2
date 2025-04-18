@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
     public bool isEnemy;
 
     public Image playerHealthBar;
-
+    public bool isStage2;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,7 +31,8 @@ public class Health : MonoBehaviour
 
         if(totalHealth <= initHealth/2 && isBoss == true)
         {
-
+            isStage2 = true;
+            Debug.Log(isStage2);
         }
 
         if(totalHealth <= 0 && isPlayer == false)
@@ -52,6 +53,11 @@ public class Health : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D other) 
     {
         if(other.gameObject.tag == "PlayerBullet" && isEnemy == true)
+        {
+            totalHealth -= bulletDamage;
+            Debug.Log(totalHealth);
+        }
+        else if(other.gameObject.tag == "PlayerBullet" && isBoss == true)
         {
             totalHealth -= bulletDamage;
             Debug.Log(totalHealth);
