@@ -463,6 +463,7 @@ MonoBehaviour:
   isPlayer: 0
   isEnemy: 1
   playerHealthBar: {fileID: 0}
+  isStage2: 0
 --- !u!1 &477813848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8275779693124290596, guid: a670ae4ac95c29c458f0bf10893589ab, type: 3}
@@ -1079,6 +1080,7 @@ MonoBehaviour:
   isPlayer: 0
   isEnemy: 1
   playerHealthBar: {fileID: 0}
+  isStage2: 0
 --- !u!1 &1291841336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1185,13 +1187,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b0835c11a1ef8c4ca1cbcc9184e568e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  totalHealth: 100
+  totalHealth: 200
   bulletDamage: 10
   initHealth: 0
-  isBoss: 0
+  isBoss: 1
   isPlayer: 0
   isEnemy: 0
   playerHealthBar: {fileID: 0}
+  isStage2: 0
 --- !u!212 &1291841340
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1548,6 +1551,7 @@ MonoBehaviour:
   isPlayer: 0
   isEnemy: 1
   playerHealthBar: {fileID: 0}
+  isStage2: 0
 --- !u!4 &1854701325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1066591375336200768, guid: 1bc97fc893226dc4bb323c926d0804dc, type: 3}
