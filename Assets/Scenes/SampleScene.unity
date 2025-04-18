@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 386532585}
   m_Layer: 0
   m_Name: Infantry
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -300,7 +300,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 100
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -862,9 +862,10 @@ GameObject:
   - component: {fileID: 1201333643}
   - component: {fileID: 1201333642}
   - component: {fileID: 1201333641}
+  - component: {fileID: 1201333646}
   m_Layer: 0
   m_Name: Sniper
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1025,6 +1026,24 @@ Transform:
   - {fileID: 1491507845}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1201333646
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1201333640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0835c11a1ef8c4ca1cbcc9184e568e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 100
+  bulletDamage: 10
+  initHealth: 0
+  isBoss: 0
+  isPlayer: 0
+  isEnemy: 1
 --- !u!1 &1291841336
 GameObject:
   m_ObjectHideFlags: 0
@@ -1523,6 +1542,7 @@ GameObject:
   - component: {fileID: 1708736532}
   - component: {fileID: 1708736531}
   - component: {fileID: 1708736535}
+  - component: {fileID: 1708736536}
   m_Layer: 0
   m_Name: Kamikaze
   m_TagString: Enemy
@@ -1685,6 +1705,24 @@ MonoBehaviour:
   timerTime: 0.5
   timerSave: 0
   motionSave: {x: 0, y: 0}
+--- !u!114 &1708736536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1708736530}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0835c11a1ef8c4ca1cbcc9184e568e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 100
+  bulletDamage: 10
+  initHealth: 0
+  isBoss: 0
+  isPlayer: 0
+  isEnemy: 1
 --- !u!4 &1854701325 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1066591375336200768, guid: 1bc97fc893226dc4bb323c926d0804dc, type: 3}
