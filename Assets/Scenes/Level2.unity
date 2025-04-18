@@ -1438,11 +1438,8 @@ PlayableDirector:
     value: {fileID: 1114954272}
   - key: {fileID: -1795161877250589456, guid: 7eb7085377a88be45a567b0f3f9a57d9, type: 2}
     value: {fileID: 1428042827}
-<<<<<<< Updated upstream
   - key: {fileID: -675736993703753803, guid: 7eb7085377a88be45a567b0f3f9a57d9, type: 2}
     value: {fileID: 1114954272}
-=======
->>>>>>> Stashed changes
   m_ExposedReferences:
     m_References: []
 --- !u!4 &1832233972
