@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     void Start()
     {
         initHealth = totalHealth;
-        
+        spriteR = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -34,6 +34,7 @@ public class Health : MonoBehaviour
         if(totalHealth <= initHealth/2 && isBoss == true)
         {
             isStage2 = true;
+            spriteR.sprite = sprite;
             Debug.Log(isStage2);
         }
 

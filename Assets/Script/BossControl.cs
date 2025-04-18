@@ -21,7 +21,7 @@ public class BossControl : MonoBehaviour
         timerTime -= Time.deltaTime; // timer for boss dashing (stage1 movement)
         if(timerTime <= 0.0f && bossActive == true)
         {
-            if(health.isStage2 == true)
+            if(health.isStage2 == true) // stage 2 movement
             {
                 transform.position = (player.transform.position - transform.position)/2;
             }
