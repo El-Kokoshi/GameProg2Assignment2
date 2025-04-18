@@ -8,6 +8,7 @@ public class PlayerLocator : MonoBehaviour
     [SerializeField] public bool isAvoiding;
     public bool patrolDirection;
     [SerializeField] public bool isActive;
+    [SerializeField] public bool isKamikaze;
     [SerializeField] public float timerTime = 1.5f;
     public float timerSave;
     public Vector2 motionSave;
@@ -64,7 +65,11 @@ public class PlayerLocator : MonoBehaviour
         if(other.tag == "Player")
         {
             motionSave = GetComponent<Rigidbody2D>().linearVelocity;
-            isActive = false;
+            
+            if(!isKamikaze)
+            {
+                isActive = false;
+            }
         }
     }
 
