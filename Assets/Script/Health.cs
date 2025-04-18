@@ -6,6 +6,7 @@ public class Health : MonoBehaviour
 {
     [SerializeField] public float totalHealth = 100.0f;
     [SerializeField] public float bulletDamage = 10.0f;
+    [SerializeField] public GameObject riflebox;
     [SerializeField] public SpriteRenderer spriteR;
     [SerializeField] public Sprite sprite;
     public float initHealth;
@@ -21,6 +22,7 @@ public class Health : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        riflebox.SetActive(false);
         initHealth = totalHealth;
         spriteR = GetComponent<SpriteRenderer>();
     }
@@ -45,6 +47,7 @@ public class Health : MonoBehaviour
         {
             isStage2 = true;
             spriteR.sprite = sprite;
+            riflebox.SetActive(true);
             Debug.Log(isStage2);
         }
 

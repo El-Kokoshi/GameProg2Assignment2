@@ -168,7 +168,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   runSpeed: 2.5
   patrolModifier: 2
-  player: {fileID: 0}
+  player: {fileID: 3956469324098073531, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
   isAvoiding: 0
   patrolDirection: 0
   isActive: 1
@@ -198,3 +198,4 @@ MonoBehaviour:
   isEnemy: 1
   playerHealthBar: {fileID: 0}
   isStage2: 0
+  sceneName: 
