@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      simpleboss_0: 880201527861692268
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

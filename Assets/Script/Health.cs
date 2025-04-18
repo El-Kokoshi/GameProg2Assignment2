@@ -5,6 +5,8 @@ public class Health : MonoBehaviour
 {
     [SerializeField] public float totalHealth = 100.0f;
     [SerializeField] public float bulletDamage = 10.0f;
+    [SerializeField] public SpriteRenderer spriteR;
+    [SerializeField] public Sprite sprite;
     public float initHealth;
     public bool isBoss;
     public bool isPlayer;

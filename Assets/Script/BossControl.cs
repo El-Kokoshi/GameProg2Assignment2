@@ -5,6 +5,7 @@ public class BossControl : MonoBehaviour
     [SerializeField] public float timerTime = 1.5f;
     [SerializeField] public float dashSpeed = 3.5f;
     [SerializeField] public GameObject player;
+    [SerializeField] public Health health;
     public float timerSave;
     public bool bossActive;
     
@@ -20,6 +21,11 @@ public class BossControl : MonoBehaviour
         timerTime -= Time.deltaTime; // timer for boss dashing (stage1 movement)
         if(timerTime <= 0.0f && bossActive == true)
         {
+            if(health.isStage2 == true)
+            {
+                transform.position = (player.transform.position - transform.position)/2;
+            }
+
             GetComponent<Rigidbody2D>().linearVelocity = (player.transform.position - transform.position).normalized * dashSpeed;
             timerTime = timerSave;
         }
