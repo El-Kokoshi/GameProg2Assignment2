@@ -285,6 +285,7 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
+<<<<<<< Updated upstream
 --- !u!114 &-675736993703753803
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -326,6 +327,8 @@ MonoBehaviour:
   m_OpenClipOffsetRotation: {x: 0, y: 0, z: 0, w: 1}
   m_Rotation: {x: 0, y: 0, z: 0, w: 1}
   m_ApplyOffsets: 0
+=======
+>>>>>>> Stashed changes
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,7 +343,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Version: 0
   m_Tracks:
+<<<<<<< Updated upstream
   - {fileID: -675736993703753803}
+=======
+>>>>>>> Stashed changes
   - {fileID: -1795161877250589456}
   m_FixedDuration: 0
   m_EditorSettings:
@@ -348,6 +354,7 @@ MonoBehaviour:
     m_ScenePreview: 1
   m_DurationMode: 0
   m_MarkerTrack: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!74 &1432688430870951157
 AnimationClip:
   m_ObjectHideFlags: 0
@@ -468,3 +475,5 @@ AnimationClip:
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
   m_Events: []
+=======
+>>>>>>> Stashed changes
