@@ -1202,9 +1202,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8782515427676486536, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
+      propertyPath: sceneName
+      value: Level1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8782515427676486536, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
       propertyPath: playerHealthBar
       value: 
       objectReference: {fileID: 256673570}
+    - target: {fileID: 8906328170019164971, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
+      propertyPath: sceneName
+      value: MissionPassed
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1651,6 +1659,10 @@ PrefabInstance:
     - target: {fileID: 6174693600066569056, guid: 5a89a8f7716de7140b5ed2b628c43ef5, type: 3}
       propertyPath: m_Name
       value: BigBoss
+      objectReference: {fileID: 0}
+    - target: {fileID: 6174693600066569056, guid: 5a89a8f7716de7140b5ed2b628c43ef5, type: 3}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 6204328703924720450, guid: 5a89a8f7716de7140b5ed2b628c43ef5, type: 3}
       propertyPath: player

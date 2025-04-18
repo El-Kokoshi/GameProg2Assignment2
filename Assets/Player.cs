@@ -1,7 +1,10 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class Player : MonoBehaviour
 {
+    public string sceneName;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -11,6 +14,14 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        if (enemies.Length == -0)
+        {
+            Debug.Log("All enemies defeated");
+            SceneManager.LoadScene(sceneName);
+        }
+       
+            
        
 
 

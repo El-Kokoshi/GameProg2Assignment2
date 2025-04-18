@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class Health : MonoBehaviour
 
     public Image playerHealthBar;
     public bool isStage2;
-    
+
+    public string sceneName;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -28,6 +31,13 @@ public class Health : MonoBehaviour
         if (isPlayer)
         {
             playerHealthBar.fillAmount = totalHealth / 100;
+
+            if (totalHealth <= 0)
+            {
+                SceneManager.LoadScene(sceneName);
+            }
+
+
         }
 
 
