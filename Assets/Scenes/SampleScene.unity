@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 386532581}
   - component: {fileID: 386532580}
   - component: {fileID: 386532584}
+  - component: {fileID: 386532585}
   m_Layer: 0
   m_Name: Infantry
   m_TagString: Untagged
@@ -443,6 +444,70 @@ MonoBehaviour:
   timerTime: 1.5
   timerSave: 0
   motionSave: {x: 0, y: 0}
+--- !u!114 &386532585
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 386532579}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b0835c11a1ef8c4ca1cbcc9184e568e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  totalHealth: 106
+  bulletDamage: 10
+  initHealth: 0
+  isBoss: 0
+  isPlayer: 0
+  isEnemy: 1
+--- !u!1 &469642847
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 469642848}
+  - component: {fileID: 469642849}
+  m_Layer: 0
+  m_Name: FiringPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &469642848
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469642847}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.601, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1444227170}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &469642849
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469642847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 958d6d9f89b206d46be55204114d143d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 5809093010191111765, guid: f5c66c0cf692ae048b1cb9e34c84ef72, type: 3}
+  grenadePrefab: {fileID: 5809093010191111765, guid: 53e9e48898386e14a81e97df179094d4, type: 3}
 --- !u!1 &477813848 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8275779693124290596, guid: a670ae4ac95c29c458f0bf10893589ab, type: 3}
@@ -973,6 +1038,7 @@ GameObject:
   - component: {fileID: 1291841339}
   - component: {fileID: 1291841338}
   - component: {fileID: 1291841337}
+  - component: {fileID: 1291841342}
   m_Layer: 0
   m_Name: BigBoss
   m_TagString: Untagged
@@ -992,7 +1058,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1000000
+  m_Mass: 1010
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_GravityScale: 0
@@ -1070,6 +1136,7 @@ MonoBehaviour:
   initHealth: 0
   isBoss: 0
   isPlayer: 0
+  isEnemy: 0
 --- !u!212 &1291841340
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1141,6 +1208,23 @@ Transform:
   - {fileID: 1854701325}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291841342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1291841336}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e0811d108e164ef4ca62ce1a61f6feae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerTime: 2
+  dashSpeed: 3.5
+  player: {fileID: 1546629192}
+  timerSave: 0
+  bossActive: 0
 --- !u!4 &1335670341 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1066591375336200768, guid: 1bc97fc893226dc4bb323c926d0804dc, type: 3}
@@ -1204,6 +1288,7 @@ MonoBehaviour:
   initHealth: 0
   isBoss: 0
   isPlayer: 1
+  isEnemy: 0
 --- !u!1001 &1444227169
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1256,13 +1341,20 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5019018629815144355, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.662
+      objectReference: {fileID: 0}
     - target: {fileID: 6075977966461707012, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 5276625514534140838, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 469642848}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6075977966461707012, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
       insertIndex: -1
@@ -1277,6 +1369,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1337479062}
   m_SourcePrefab: {fileID: 100100000, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
+--- !u!4 &1444227170 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5276625514534140838, guid: 134f63830c8edc34e9e6981f506d541e, type: 3}
+  m_PrefabInstance: {fileID: 1444227169}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1491507844
 GameObject:
   m_ObjectHideFlags: 0
@@ -1399,7 +1496,7 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1000
-  m_LinearDamping: 0
+  m_LinearDamping: 0.1
   m_AngularDamping: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 0}
