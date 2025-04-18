@@ -24,7 +24,7 @@ public class BossControl : MonoBehaviour
         {
             if(health.isStage2 == true) // stage 2 movement
             {
-                transform.position = (player.transform.position - transform.position)/2 + transform.position;
+                transform.position += (player.transform.position - transform.position)/2;
             }
 
             GetComponent<Rigidbody2D>().linearVelocity = (player.transform.position - transform.position).normalized * dashSpeed;
