@@ -8,6 +8,7 @@ public class BossControl : MonoBehaviour
     [SerializeField] public Health health;
     public float timerSave;
     public bool bossActive;
+
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,7 +24,7 @@ public class BossControl : MonoBehaviour
         {
             if(health.isStage2 == true) // stage 2 movement
             {
-                transform.position = (player.transform.position - transform.position)/2;
+                transform.position = (player.transform.position - transform.position)/2 + transform.position;
             }
 
             GetComponent<Rigidbody2D>().linearVelocity = (player.transform.position - transform.position).normalized * dashSpeed;
